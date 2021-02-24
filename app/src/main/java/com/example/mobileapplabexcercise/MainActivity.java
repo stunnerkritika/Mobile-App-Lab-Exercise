@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showToast(View view) {
-//        Intent intent = new Intent(MainActivity.this,ayajas.class);
-//        startActivities(intent);
 
         Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_LONG);
 
