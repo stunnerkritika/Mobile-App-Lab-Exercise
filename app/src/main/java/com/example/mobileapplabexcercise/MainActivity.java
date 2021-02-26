@@ -2,7 +2,9 @@ package com.example.mobileapplabexcercise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +14,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_Toast ,btn_count;
+    Button btn_Toast, btn_count;
     TextView txtcount;
     private int mCount = 0;
 
@@ -27,12 +29,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         btn_count.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
                 ++mCount;
                 if (txtcount != null)
                     txtcount.setText(Integer.toString(mCount));
+                if(mCount%2==0)
+                {
 
+                    btn_count.setBackgroundColor(getResources().getColor(R.color.pink));
+
+                }
+                else {
+                   
+                    btn_count.setBackgroundColor(getResources().getColor(R.color.purple_700));
+                }
             }
         });
     }
@@ -43,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         toast.show();
     }
-}
 
+    public void showzero(View view) {
+/// .....................
+        txtcount.setText("0");
+    }
+
+
+}
 

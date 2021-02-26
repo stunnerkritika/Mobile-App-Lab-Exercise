@@ -9,48 +9,65 @@
 
     <Button
         android:id="@+id/btn_toast"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/design_default_color_on_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#ADD8E6"
         android:onClick="showToast"
-        android:textSize="25dp"
         android:text="Toast"
         android:textColor="@android:color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/txt_count"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="260dp"
+        android:layout_height="250dp"
+        android:layout_margin="25dp"
         android:background="#FFEB3B"
         android:fontFamily="sans-serif"
         android:gravity="center|center_vertical"
         android:text="0"
+
         android:textSize="160sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_count"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="#00008B"
         android:text="Count"
-        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_zero"
+        app:layout_constraintVertical_bias="0.04"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="#808080"
+        android:onClick="showzero"
+        android:text="Zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_toast"
-        app:layout_constraintVertical_bias="0.847"
+        app:layout_constraintVertical_bias="0.026"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
