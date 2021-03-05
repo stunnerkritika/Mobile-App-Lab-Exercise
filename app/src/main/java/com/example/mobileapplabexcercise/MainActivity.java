@@ -12,7 +12,8 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_Toast ,btn_count;
+    public static final String EXTRA_MESSAGE = "com.example.mobileapplabexcercise.extra.MESSAGE";
+    Button btn_Toast, btn_count;
     TextView txtcount;
     private int mCount = 0;
 
@@ -38,11 +39,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showToast(View view) {
-//        Intent intent = new Intent(MainActivity.this,ayajas.class);
-//        startActivities(intent);
+        Intent intent = new Intent(MainActivity.this, newactivity.class);
+        String countValue = Integer.toString(mCount);
+        intent.putExtra(EXTRA_MESSAGE, countValue);
+        startActivity(intent);
+
 
         Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_LONG);
-
         toast.show();
     }
 }
